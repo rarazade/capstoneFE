@@ -5,52 +5,223 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col, Image, Card, Form, Button, CardText, CardTitle } 
     from 'react-bootstrap';
 
+    import Carousel from 'react-bootstrap/Carousel';
 
 function App() {
   return (
-    <Container style={{background: "#FF9CB1"}}>
+    <Container style={{background: "#FF9CB1", height:'100vh'}}>
         <Row className="mx-auto">
         <Col>
-            <Card style={{marginTop:"3em"}}>
+            <Card style={{marginTop:"2em"}}>
       <Card.Body>
-              <Image src="verif.png" rounded />
-              <CardTitle>BangkitBeyond</CardTitle>
-              <CardText>2 Tahun 10 Bulan</CardText>
-              <Button style={{background: "#FF5276",}}>Tanya Bloomie</Button>
+      <Container>
+      <Row className='mt-2'>
+        <Col xs={3}><Image src="verif.png" rounded /></Col>
+        <Col xs={5}>
+        <p>BangkitBeyond</p>
+        <p>2 Tahun 10 Bulan</p>
+        </Col>
+        <Col><Button style={{background: "#FF5276", width:'5.5em'}}>Tanya Bloomie</Button></Col>
+      </Row>
+    </Container>      
     </Card.Body>
     </Card>
-            </Col>  
-        </Row>    
-        <Row className="mx-auto">
-            <Col>
-      <Card style={{marginTop:"3em"}}>
+      </Col>  
+        </Row> 
+
+        <Row className="my-auto">
+            <Col style={{background:'#ffffff', marginTop:'2em'}}>
+            <Container style={{width:'100%'}}>
+              <Row>
+                <Col>
+                <Card style={{marginTop:"2em", width:'100%'}}>
       <Card.Body>
-            <Col style={{marginLeft:"8.5em"}}>
+        <Row style={{textAlign:"center"}}>
+        <Col>
               <Image src="verif.png" rounded />
-            </Col> 
-        <CardText>Luar biasa! Status Gizi si Kecil Sangat Baik. Pertahankan ya!</CardText>
-        <Form>
-      <Form.Group className="mb-3">
-        <Form.Control type="text" placeholder="Nama" />
-      </Form.Group>
-      <Form.Group className="mb-3">
-        <Form.Control type="text" placeholder="Umur (Bulan)" />
-      </Form.Group>
-      <Form.Group className="mb-3">
-        <Form.Control type="text" placeholder="Tinggi Badan (Cm)" />
-      </Form.Group>
-      <Form.Group className="mb-3">
-        <Form.Control type="text" placeholder="Berat Badan (Kg)" />
-      </Form.Group>
-      <Form.Group className="mb-3">
-        <Form.Control type="text" placeholder="Jenis Kelamin Bayi" />
-      </Form.Group>
-    </Form>
-    <Button className='mt-2' style={{background: "#FF5276", width: '100%'}}>Update Status</Button>
-    </Card.Body>
-    </Card>
-            </Col>  
-        </Row>    
+            </Col>
+            <CardText>Luar biasa! Status Gizi si Kecil Sangat Baik. Pertahankan ya!</CardText>
+        </Row>
+        <Row style={{borderBottom:'1px solid black', padding:'0.5em'}}>
+          <Col>Nama</Col>
+          <Col style={{textAlign:'right'}}>BangkitBeyond</Col>
+        </Row>
+        <Row style={{borderBottom:'1px solid black', padding:'0.5em'}}>
+          <Col>Umur (Bulan)</Col>
+          <Col style={{textAlign:'right'}}>1</Col>
+        </Row>
+        <Row style={{borderBottom:'1px solid black', padding:'0.5em'}}>
+          <Col>Tinggi Badan(Cm)</Col>
+          <Col style={{textAlign:'right'}}>61</Col>
+        </Row>
+        <Row style={{borderBottom:'1px solid black', padding:'0.5em'}}>
+          <Col>Berat Badan(Kg)</Col>
+          <Col style={{textAlign:'right'}}>16</Col>
+        </Row>
+        <Row style={{borderBottom:'1px solid black', padding:'0.5em'}}>
+          <Col>Jenis Kelamin</Col>
+          <Col style={{textAlign:'right'}}>Laki-laki</Col>
+        </Row>
+        <Row>
+          <Col>
+          <Button className='mt-4' style={{background: "#FF5276", width: '100%'}}>Update Status</Button>
+          </Col>
+        </Row>
+          </Card.Body>
+          </Card>
+          </Col>
+        </Row>
+
+        <Row style={{marginTop:"2em"}}>
+          <Col>
+          <h5>Informasi Untukmu</h5>
+          <Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          style={{height:'15em'}}
+          src="art.png"
+        />
+        <Carousel.Caption>
+          <p>Bermanfaat untuk Anak, Orangtua Bisa Bacakan Dongeng sejak Masa Kehamilan</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          style={{height:'15em'}}
+          src="art.png"
+          alt="Second slide"
+        />
+        <Carousel.Caption>
+          <p>Bermanfaat untuk Anak, Orangtua Bisa Bacakan Dongeng sejak Masa Kehamilan</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          style={{height:'15em'}}
+          src="art.png"
+          alt="Third slide"
+        />
+        <Carousel.Caption>
+          <p>
+          Bermanfaat untuk Anak, Orangtua Bisa Bacakan Dongeng sejak Masa Kehamilan
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+          <Carousel style={{marginTop:"2em"}}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          style={{height:'15em'}}
+          src="art.png"
+        />
+        <Carousel.Caption>
+          <p>Bermanfaat untuk Anak, Orangtua Bisa Bacakan Dongeng sejak Masa Kehamilan</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          style={{height:'15em'}}
+          src="art.png"
+          alt="Second slide"
+        />
+        <Carousel.Caption>
+          <p>Bermanfaat untuk Anak, Orangtua Bisa Bacakan Dongeng sejak Masa Kehamilan</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          style={{height:'15em'}}
+          src="art.png"
+          alt="Third slide"
+        />
+        <Carousel.Caption>
+          <p>
+          Bermanfaat untuk Anak, Orangtua Bisa Bacakan Dongeng sejak Masa Kehamilan
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+          <Carousel style={{marginTop:"2em"}}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          style={{height:'15em'}}
+          src="art.png"
+        />
+        <Carousel.Caption>
+          <p>Bermanfaat untuk Anak, Orangtua Bisa Bacakan Dongeng sejak Masa Kehamilan</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          style={{height:'15em'}}
+          src="art.png"
+          alt="Second slide"
+        />
+        <Carousel.Caption>
+          <p>Bermanfaat untuk Anak, Orangtua Bisa Bacakan Dongeng sejak Masa Kehamilan</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          style={{height:'15em'}}
+          src="art.png"
+          alt="Third slide"
+        />
+        <Carousel.Caption>
+          <p>
+          Bermanfaat untuk Anak, Orangtua Bisa Bacakan Dongeng sejak Masa Kehamilan
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+          </Col>
+        </Row>
+
+        <Row style={{
+          textAlign:'center',
+          position:'fixed',
+          bottom:'0',
+          background:'#ffffff',
+          width:'100%',
+          paddingTop:'2em'}}>
+          <Col>
+          <Image src="home.png" rounded />
+          <p>Beranda</p>
+          </Col>
+          <Col>
+          <Image src="artikel.png" rounded />
+          <p>Artikel</p>
+          </Col>
+          <Col>
+          <Image src="pp.png" rounded />
+          <p>Profil</p>
+          </Col>
+        </Row>
+
+      
+
+    </Container>     
+    </Col>  
+    </Row>
     </Container>
   );
 }
