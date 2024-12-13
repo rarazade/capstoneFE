@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col, Image, Card, Form, Button, CardText } 
     from 'react-bootstrap';
 
 
-function App() {
+function Login() {
   return (
     <Container style={{marginTop: '10em'}}>
         <Row className="mx-auto" style={{width: '14rem'}}>
@@ -28,9 +28,13 @@ function App() {
       </Form.Group>
     </Form>
     <Card.Link style={{display: 'block', textDecoration: 'none', color: 'black', textAlign: 'right'}} href="#">lupa password</Card.Link>
-    <Button className='mt-2' style={{background: "#FF5276", width: '100%'}}>Masuk</Button>
+    <Link to={'/home'}>
+      <Button className='mt-2' style={{background: "#FF5276", width: '100%'}}>Masuk</Button>
+    </Link>
     <CardText className='mt-2'> Belum punya akun?</CardText>
-    <Button className='mt-2' variant='dark' style={{background: "#FFFFFF", color:"#000000", width: '100%'}}>Daftar</Button>
+    <Link to={'/regist'}>
+      <Button className='mt-2' variant='dark' style={{background: "#FFFFFF", color:"#000000", width: '100%'}}>Daftar</Button>
+    </Link>
       </Card.Body>
     </Card>
             </Col>  
@@ -39,4 +43,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;

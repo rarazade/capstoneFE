@@ -6,7 +6,7 @@ import { Container, Row, Col, Image, Card, Form, Button, CardText, CardTitle }
     from 'react-bootstrap';
 
 
-function App() {
+function Tanya() {
   return (
     <Container style={{marginTop: '20em'}}>
         <Row className="mx-auto" style={{textAlign:'center'}}>
@@ -45,4 +45,4 @@ function App() {
   );
 }
 
-export default App;
+export default Tanya;

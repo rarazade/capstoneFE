@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
 
+import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col, Image, Card, Form, Button, CardText, CardTitle } 
     from 'react-bootstrap';
 
     import Carousel from 'react-bootstrap/Carousel';
  
-function App() {
+function DetailAkun() {
+  const navigate = useNavigate()
   return (
     <Container style={{height:'100vh'}}>
       <Row>
@@ -58,6 +60,7 @@ function App() {
 
       <Row>
         <Col>
+        <Link to={'/'}>
         <Button className='mt-2' variant="light" style={{width:'100%', height:'4em'}} >
       <Row>
         <Col xs={1}>
@@ -68,6 +71,8 @@ function App() {
         </Col>
       </Row>
         </Button>
+          
+        </Link>
         </Col>
       </Row>
         </Container>
@@ -82,15 +87,15 @@ function App() {
           width:'100%',
           paddingTop:'2em'}}>
           <Col>
-          <Image src="home.png" rounded />
+          <Image onClick={() => navigate('/home')} src="home.png" rounded />
           <p>Beranda</p>
           </Col>
           <Col>
-          <Image src="artikel.png" rounded />
+          <Image onClick={() => navigate('/article')} src="artikel.png" rounded />
           <p>Artikel</p>
           </Col>
           <Col>
-          <Image src="pp.png" rounded />
+          <Image onClick={() => navigate('/profile')} src="pp.png" rounded />
           <p>Profil</p>
           </Col>
         </Row>
@@ -98,4 +103,4 @@ function App() {
   );
 }
 
-export default App;
+export default DetailAkun;

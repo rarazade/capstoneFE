@@ -7,7 +7,7 @@ import { Container, Row, Col, Image, Card, Form, Button, CardText, CardTitle }
 
     import Carousel from 'react-bootstrap/Carousel';
 
-function App() {
+function Detail() {
   return (
     <Container className='mx-auto' style={{background:'#EFEEEA', height:'100%'}}>
       <Row>
@@ -85,4 +85,4 @@ Menghadapi berbagai penyakit ini, penting bagi orang tua untuk selalu waspada da
   );
 }
 
-export default App;
+export default Detail;

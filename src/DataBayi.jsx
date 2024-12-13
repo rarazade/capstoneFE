@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
 
+import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col, Image, Card, Form, Button, CardText } 
     from 'react-bootstrap';
 
 
-function App() {
+function DataBayi() {
+  const navigate = useNavigate()
   return (
     <Container style={{marginTop: '5em'}}>
         <Row className="mx-auto" style={{width: '14rem'}}>
@@ -36,8 +38,10 @@ function App() {
         <Form.Control type="text" placeholder="Lingkar Lengan Tangan Atas (Cm)" />
       </Form.Group>
     </Form>
-    <Button className='mt-2' style={{background: "#FF5276", width: '100%'}}>Daftar</Button>
-    <Button className='mt-2' variant='dark' style={{background: "#FFFFFF", color:"#000000", width: '100%'}}>Kembali</Button>
+    <Link to={'/done'}>
+      <Button className='mt-2' style={{background: "#FF5276", width: '100%'}}>Daftar</Button>
+    </Link>
+      <Button onClick={() => navigate(-1)} className='mt-2' variant='dark' style={{background: "#FFFFFF", color:"#000000", width: '100%'}}>Kembali</Button>
       </Card.Body>
     </Card>
             </Col>  
@@ -46,4 +50,4 @@ function App() {
   );
 }
 
-export default App;
+export default DataBayi;

@@ -1,13 +1,20 @@
 import React from 'react';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col, Image, Card, Form, Button, CardText, CardTitle } 
     from 'react-bootstrap';
 
-    import Carousel from 'react-bootstrap/Carousel';
+import Carousel from 'react-bootstrap/Carousel';
 
-function App() {
+
+function Beranda() {
+  const navigate = useNavigate()
+  const handleClickProfile = () => {
+      navigate('/profile')
+    }
   return (
     <Container style={{background: "#FF9CB1", height:'100vh'}}>
         <Row className="mx-auto">
@@ -21,7 +28,11 @@ function App() {
         <p>BangkitBeyond</p>
         <p>2 Tahun 10 Bulan</p>
         </Col>
-        <Col><Button style={{background: "#FF5276", width:'5.5em'}}>Tanya Bloomie</Button></Col>
+        <Col>
+          <Link to={'/question'}>
+            <Button style={{background: "#FF5276", width:'5.5em'}}>Tanya Bloomie</Button>
+          </Link>
+        </Col>
       </Row>
     </Container>      
     </Card.Body>
@@ -64,7 +75,9 @@ function App() {
         </Row>
         <Row>
           <Col>
-          <Button className='mt-4' style={{background: "#FF5276", width: '100%'}}>Update Status</Button>
+          <Link to={'/baby'}>
+            <Button className='mt-4' style={{background: "#FF5276", width: '100%'}}>Update Status</Button>
+          </Link>
           </Col>
         </Row>
           </Card.Body>
@@ -75,6 +88,7 @@ function App() {
         <Row style={{marginTop:"2em"}}>
           <Col>
           <h5>Informasi Untukmu</h5>
+          <Link to={'/article'}>
           <Carousel>
       <Carousel.Item>
         <img
@@ -111,6 +125,7 @@ function App() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+          </Link>
           </Col>
         </Row>
 
@@ -201,18 +216,19 @@ function App() {
           position:'fixed',
           bottom:'0',
           background:'#ffffff',
+          zIndex: '1',
           width:'100%',
           paddingTop:'2em'}}>
           <Col>
-          <Image src="home.png" rounded />
+          <Image onClick={() => navigate('/home')} src="home.png" rounded />
           <p>Beranda</p>
           </Col>
           <Col>
-          <Image src="artikel.png" rounded />
+          <Image onClick={() => navigate('/article')} src="artikel.png" rounded />
           <p>Artikel</p>
           </Col>
           <Col>
-          <Image src="pp.png" rounded />
+          <Image onClick={() => navigate('/profile')} src="pp.png" rounded />
           <p>Profil</p>
           </Col>
         </Row>
@@ -226,4 +242,4 @@ function App() {
   );
 }
 
-export default App;
+export default Beranda;

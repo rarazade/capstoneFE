@@ -7,7 +7,7 @@ import { Container, Row, Col, Image, Card, Form, Button, CardText, CardTitle }
 
     import Carousel from 'react-bootstrap/Carousel';
 
-function App() {
+function Screen() {
   return (
     <Container style={{background:'#FF5276', height:'100vh'}}>
       <Row>
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default Screen;

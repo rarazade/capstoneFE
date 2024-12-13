@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col, Image, Card, Form, Button, CardText } 
     from 'react-bootstrap';
 
 
-function App() {
+function Regist() {
   return (
     <Container style={{marginTop: '5em'}}>
         <Row className="mx-auto" style={{width: '14rem'}}>
@@ -39,8 +39,12 @@ function App() {
         <Form.Control type="password" placeholder='Konfirmasi Password' />
       </Form.Group>
     </Form>
-    <Button className='mt-2' style={{background: "#FF5276", width: '100%'}}>Daftar</Button>
-    <Button className='mt-2' variant='dark' style={{background: "#FFFFFF", color:"#000000", width: '100%'}}>Kembali</Button>
+    <Link to={'/setProfile'}>
+      <Button className='mt-2' style={{background: "#FF5276", width: '100%'}}>Daftar</Button>
+    </Link>
+    <Link to={'/'}>
+      <Button className='mt-2' variant='dark' style={{background: "#FFFFFF", color:"#000000", width: '100%'}}>Kembali</Button>
+    </Link>
       </Card.Body>
     </Card>
             </Col>  
@@ -49,4 +53,4 @@ function App() {
   );
 }
 
-export default App;
+export default Regist;
